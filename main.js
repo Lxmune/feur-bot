@@ -17,7 +17,7 @@ client.on('ready', () => {
   
 client.on('messageCreate', async (message) => {
       if (message.author.bot) return;
-      if (message.content.includes('quoi') || message.content.includes('quoi?') || message.content.includes('quoi ?')) {
+      if (message.content.includes('quoi') && message.content.toUpperCase() == "QUOI") {
           message.reply('feur');
           return;
       }
