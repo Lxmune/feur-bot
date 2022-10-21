@@ -16,19 +16,23 @@ client.on('ready', () => {
   });
   
 client.on('messageCreate', async (message) => {
-      if (message.author.bot) return;
-      if (message.content.toLowerCase().includes("quoi")) {
-          message.reply('feur');
-          return;
-      }
-      if (message.content.includes('aino')) {
-          message.reply('harceleur');
-          return;
-      }
-        if (message.content.includes('sta')) {
-          message.reply('ptdr c ki');
-          return;
-      }
+    if (message.author.bot) return;
+    if (message.content.toLowerCase().includes("quoi")) {
+        message.reply('feur');
+        return;
+    }
+    if (message.content.toLowerCase().includes('aino')) {
+        message.reply('harceleur');
+        return;
+    }
+    if (message.content.toLowerCase().includes('sta')) {
+        message.reply('ptdr c ki');
+        return;
+    }
+    if (message.content.toLowerCase().includes('owo')) {
+        message.reply('UwU');
+        return;
+    }
 });
 
 module.exports = class Main {
