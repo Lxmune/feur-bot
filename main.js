@@ -1,3 +1,7 @@
+// Token handling
+require('dotenv').config();
+const token = process.env.TOKEN;
+
 const { Client, GatewayIntentBits, messageLink, Message } = require('discord.js');
 const client = new Client({ intents: [
     GatewayIntentBits.DirectMessages,
@@ -13,9 +17,14 @@ client.on('ready', () => {
 
 client.on('messageCreate', async (message) => {
     if (message.author.bot) return;
-    if (message.content.endsWith('quoi') || message.content.endsWith('quoi?') || message.content.endsWith('quoi ?')) {
+    if (message.content.includes('quoi') || message.content.includes('quoi?') || message.content.includes('quoi ?')) {
         message.reply('feur');
+        return;
+    }
+    if (message.content.includes('aino') || message.content.includes('Aino')) {
+        message.reply('la grosse pute');
+        return;
     }
 });
 
-client.login("MTAzMjc1ODc3ODU0Mzc1MTI1MA.GAlAoH.d8PmTU-YHSDHZTVc1lXiQUwW3utA8HLLRsV-js");
+client.login(token);
