@@ -25,6 +25,10 @@ client.on('messageCreate', async (message) => {
           message.reply('harceleur');
           return;
       }
+        if (message.content.includes('sta')) {
+          message.reply('ptdr c ki');
+          return;
+      }
 });
 
 module.exports = class Main {
