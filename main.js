@@ -22,7 +22,7 @@ client.on('messageCreate', async (message) => {
         return;
     }
     if (message.content.includes('sacoche')) {
-        message.reply('yo tout le monde c sardoche');
+        message.reply('yo tout le monde c sardoche!!!!');
         return;
     }
 });
