@@ -21,10 +21,6 @@ client.on('messageCreate', async (message) => {
         message.reply('feur');
         return;
     }
-    if (message.content.includes('aino') || message.content.includes('Aino')) {
-        message.reply('la grosse pute');
-        return;
-    }
 });
 
 client.login(token);
