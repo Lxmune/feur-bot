@@ -33,6 +33,26 @@ client.on('messageCreate', async (message) => {
         message.reply('UwU');
         return;
     }
+    if (message.content.toLowerCase() == "feur") {
+        message.reply('ouge');
+        return;
+    }
+    if (message.content.toLowerCase() == "ouge") {
+        message.reply('gorge');
+        return;
+    }
+    if (message.content.toLowerCase() == "gorge") {
+        message.reply('profonde');
+        return;
+    }
+    if (message.content.toLowerCase() == "profonde") {
+        message.reply('ément');
+        return;
+    }
+    if (message.content.toLowerCase() == "ément") {
+        message.reply('eur');
+        return;
+    }
 });
 
 module.exports = class Main {
