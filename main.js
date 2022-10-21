@@ -21,6 +21,10 @@ client.on('messageCreate', async (message) => {
         message.reply('feur');
         return;
     }
+    if (message.content.includes('sacoche')) {
+        message.reply('yo tout le monde c sardoche');
+        return;
+    }
 });
 
 client.login(token);
