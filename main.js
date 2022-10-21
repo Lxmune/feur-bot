@@ -1,7 +1,6 @@
 // Token handling
 require('dotenv').config();
 const token = process.env.TOKEN;
-const osu = require('node-osu');
 
 const { Client, GatewayIntentBits, messageLink, Message } = require('discord.js');
 const client = new Client({ intents: [
