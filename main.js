@@ -1,6 +1,7 @@
 // Token handling
 require('dotenv').config();
 const token = process.env.TOKEN;
+const osu = require('node-osu');
 
 const { Client, GatewayIntentBits, messageLink, Message } = require('discord.js');
 const client = new Client({ intents: [
@@ -12,19 +13,23 @@ const client = new Client({ intents: [
 ] });
 
 client.on('ready', () => {
-  console.log(`Logged in as ${client.user.tag}!`);
+    console.log(`Logged in as ${client.user.tag}!`);
+  });
+  
+client.on('messageCreate', async (message) => {
+      if (message.author.bot) return;
+      if (message.content.includes('quoi') || message.content.includes('quoi?') || message.content.includes('quoi ?')) {
+          message.reply('feur');
+          return;
+      }
+      if (message.content.includes('aino')) {
+          message.reply('harceleur');
+          return;
+      }
 });
 
-client.on('messageCreate', async (message) => {
-    if (message.author.bot) return;
-    if (message.content.includes('quoi') || message.content.includes('quoi?') || message.content.includes('quoi ?')) {
-        message.reply('feur');
-        return;
-    }
-    if (message.content.includes('sacoche')) {
-        message.reply('yo tout le monde c sardoche!!!!');
-        return;
-    }
-});
+module.exports = class Main {
+    
+}
 
 client.login(token);
